@@ -1,1 +1,1 @@
-# deploy-wasp-to-k8s
+# Deploy Wasp To Kubernetes

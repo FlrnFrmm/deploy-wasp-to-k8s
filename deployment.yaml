@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goshimmer-deployment
+  labels:
+    app: goshimmer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goshimmer
+  template:
+    metadata:
+      labels:
+        app: goshimmer
+    spec:
+      containers:
+      - name: goshimmer-container
+        image: iotaledger/goshimmer:latest
+        ports:
+        - containerPort: 80
